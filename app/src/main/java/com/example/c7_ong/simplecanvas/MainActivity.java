@@ -10,14 +10,23 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity
+{
+    //Canvas member variable mCanvas is created
+    //Stores information on what to draw on its associated bitmap
 private Canvas mCanvas;
+    //Paint member variable mPaint is created
+    //Paint objects store how to draw
 private Paint mPaint = new Paint();
 private Paint mPaintText = new Paint(Paint.UNDERLINE_TEXT_FLAG);
+    //Bitmap represents the pixels that are shown on the display
 private Bitmap mBitmap;
+    //the view in this example is the container for the bitmap
 private ImageView mImageView;
+    //both Rect variables are initialized as rectangles
 private Rect mRect = new Rect();
 private Rect mBounds = new Rect();
+    //OFFSET constant here is the distance of a rectangle drawn from the edge of the canvas
 private static final int OFFSET = 120;
 private int mOffset = OFFSET;
 private static final int MULTIPLIER = 100;
